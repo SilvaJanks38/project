@@ -30,6 +30,7 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import MyStudentsPage from "./MyStudentsPage";
+import SettingsPage from "./SettingsPage";
 const menuItems = [
   { id: 'dashboard', label: 'Dashboard', icon: dashboard_icon, activeIcon: dashboard_icon_active },
   { id: 'profile', label: 'My Profile', icon: profile_icon, activeIcon: profile_icon_active },
@@ -69,6 +70,10 @@ const storedRole = localStorage.getItem("selectedRole");
         case 'students':
         return(
           <MyStudentsPage/>
+        );
+        case 'settings':
+        return(
+          <SettingsPage/>
         );
       default:
         return <div className="text-blue-900 text-xl">{active} content</div>;
