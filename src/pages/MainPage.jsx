@@ -4,12 +4,19 @@ import { Input } from "@/components/ui/input";
 import logo from '../assets/udsm_logo.png'
 import user_icon from '../assets/icons/user.png'
 import dashboard_icon_active from '../assets/icons/dashboard_active.png'
+import dashboard_icon from '../assets/icons/dashboard.png'
 import profile_icon from '../assets/icons/profile.png'
+import profile_icon_active from '../assets/icons/profile_active.png'
 import classes_icon from '../assets/icons/classes.png'
+import classes_icon_active from '../assets/icons/classes_active.png'
 import students_icon from '../assets/icons/students.png'
+import students_icon_active from '../assets/icons/students_active.png'
 import attendance_icon from '../assets/icons/attendance.png'
+import attendance_icon_active from '../assets/icons/attendance_active.png'
+import notifications_icon from '../assets/icons/notifications.png'
 import notifications_icon_active from '../assets/icons/notifications_active.png'
 import settings_icon from '../assets/icons/settings.png'
+import settings_icon_active from '../assets/icons/settings_active.png'
 import logout_icon from '../assets/icons/logout.png'
 import TeacherDashboardPage from "./TeacherDashboardPage";
 import { Search } from "lucide-react";
@@ -23,13 +30,13 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 const menuItems = [
-  { id: 'dashboard', label: 'Dashboard', icon: dashboard_icon_active, activeIcon: dashboard_icon_active },
-  { id: 'profile', label: 'My Profile', icon: profile_icon, activeIcon: profile_icon },
-  { id: 'classes', label: 'My Classes', icon: classes_icon, activeIcon: classes_icon },
-  { id: 'students', label: 'My Students', icon: students_icon, activeIcon: students_icon },
-  { id: 'attendance', label: 'Attendance Records', icon: attendance_icon, activeIcon: attendance_icon },
-  { id: 'notifications', label: 'Notifications', icon: notifications_icon_active, activeIcon: notifications_icon_active },
-  { id: 'settings', label: 'Settings', icon: settings_icon, activeIcon: settings_icon },
+  { id: 'dashboard', label: 'Dashboard', icon: dashboard_icon, activeIcon: dashboard_icon_active },
+  { id: 'profile', label: 'My Profile', icon: profile_icon, activeIcon: profile_icon_active },
+  { id: 'classes', label: 'My Classes', icon: classes_icon, activeIcon: classes_icon_active },
+  { id: 'students', label: 'My Students', icon: students_icon, activeIcon: students_icon_active },
+  { id: 'attendance', label: 'Attendance Records', icon: attendance_icon, activeIcon: attendance_icon_active },
+  { id: 'notifications', label: 'Notifications', icon: notifications_icon, activeIcon: notifications_icon_active },
+  { id: 'settings', label: 'Settings', icon: settings_icon, activeIcon: settings_icon_active },
 ];
 const getLabelById = (id) => {
   const menuItem = menuItems.find(item => item.id === id);

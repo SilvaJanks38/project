@@ -10,11 +10,7 @@ import { useState } from "react";
 import login_pict from "../assets/login_img.png";
 
 export default function LoginPage() {
-
-
-   const { selectedRole } = useAuth();
-  
-
+  const { selectedRole } = useAuth();
 
   const { login } = useAuth();
   const navigate = useNavigate();
@@ -23,7 +19,7 @@ export default function LoginPage() {
   // default role
 
   const [password, setPassword] = useState("");
- const storedRole = localStorage.getItem("selectedRole");
+  const storedRole = localStorage.getItem("selectedRole");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -108,16 +104,14 @@ export default function LoginPage() {
                 </div>
 
                 <div>
-                  <span>Dont Have an Account?{" "}</span>
+                  <span>Dont Have an Account? </span>
                   <a
-                  onClick={handleCreateAccount}
-                  className="text-m  hover:underline"
-                >
-                  
-                  <span className="text-blue-600"> Create Here</span>
-                </a>
+                    onClick={handleCreateAccount}
+                    className="text-m  hover:underline"
+                  >
+                    <span className="text-blue-600"> Create Here</span>
+                  </a>
                 </div>
-                
               </div>
             </form>
           </CardContent>
