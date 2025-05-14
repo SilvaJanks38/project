@@ -29,6 +29,7 @@ import { useAuth } from "@/auth/AuthContext";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import MyStudentsPage from "./MyStudentsPage";
 const menuItems = [
   { id: 'dashboard', label: 'Dashboard', icon: dashboard_icon, activeIcon: dashboard_icon_active },
   { id: 'profile', label: 'My Profile', icon: profile_icon, activeIcon: profile_icon_active },
@@ -64,6 +65,10 @@ const storedRole = localStorage.getItem("selectedRole");
       case 'notifications':
         return(
           storedRole=='student'?  <StudentNotificationPage/>:<TeacherNotificationPage/>
+        );
+        case 'students':
+        return(
+          <MyStudentsPage/>
         );
       default:
         return <div className="text-blue-900 text-xl">{active} content</div>;
