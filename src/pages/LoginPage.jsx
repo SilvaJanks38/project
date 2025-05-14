@@ -107,13 +107,17 @@ export default function LoginPage() {
                   </a>
                 </div>
 
-                <a
+                <div>
+                  <span>Dont Have an Account?{" "}</span>
+                  <a
                   onClick={handleCreateAccount}
                   className="text-m  hover:underline"
                 >
-                  Dont Have an Account?{" "}
+                  
                   <span className="text-blue-600"> Create Here</span>
                 </a>
+                </div>
+                
               </div>
             </form>
           </CardContent>
