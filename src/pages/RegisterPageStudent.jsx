@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Label } from "@/components/ui/label"
 import { Card, CardContent } from "@/components/ui/card"
 import { Checkbox } from "@/components/ui/checkbox"
-import login from '../assets/login.jpg'
+import register_pict from '../assets/register.png'
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "@/auth/AuthContext";
 
@@ -25,7 +25,7 @@ export default function RegisterPageStudent() {
       {/* Left Image Section */}
       <div className="w-1/2 hidden md:flex items-center justify-center">
         <img
-          src={login} // Put your image in /public
+          src={register_pict} // Put your image in /public
           alt="Register Illustration"
           className="w-[400px]  object-contain"
         />
@@ -37,7 +37,6 @@ export default function RegisterPageStudent() {
           <CardContent className="space-y-6">
             <div className="text-center">
               <h1 className="text-2xl font-bold text-blue-900">Sign Up</h1>
-              <p>role:{selectedRole}</p>
             </div>
 
             <form className="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-700">
